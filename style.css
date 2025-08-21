@@ -17,14 +17,98 @@ html, body {
 img {
     display: block;
     margin: 0 auto;
-    width: 300px;
+    max-width: 90%; /*shrink on small screens*/
+    width: 300px; /*desktop cap size */
+    height: auto; /*keep aspect ratio*/
     margin-bottom: 20px;
     border-radius: 10px;
 }
 
 p {
-    max-width: 600px;
+    max-width: 600px; /*max width for the text block*/
+    width: 90%; /*allow it to shrink on phones*/
     margin: 0 auto;
     font-weight: bold;
     line-height: 1.6;
+
+    /*fix text from not being readable due to background image*/
+    background-color: rgba(0,0,0,0.6); /*semi-transparent black*/
+    padding: 10px;
+    border-radius: 5px;
+}
+
+h1 {
+    margin: 16px 0;
+}
+
+/*this is a media query that applied if the screen/window is below a certain width*/
+@media (max-width: 600px) {
+  h1 { font-size: 24px; }
+  p  { font-size: 16px; }
+}
+
+/*===========================================*/
+/*LAYOUT SYSTEM FOR SIDEBARS + CENTER CONTENT*/
+/*===========================================*/
+
+/* ===============================
+   LAYOUT SYSTEM FOR SIDEBARS + CENTER CONTENT
+   =============================== */
+
+/* Base: Mobile-first (stacked layout) */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;   /* Phones: one column stacked */
+  gap: 20px;
+  padding: 16px;
+}
+
+/* Side panel styling */
+.panel ul { 
+  list-style: none;       /* remove bullets */
+  margin: 0; 
+  padding-left: 0; 
+}
+
+.panel li { 
+  margin: 6px 0; 
+}
+
+.panel a { 
+  color: #00e5ff;         /* link color */
+  text-decoration: none; 
+}
+
+.panel a:hover { 
+  text-decoration: underline; 
+}
+
+/* Tablet & larger screens: switch to 3-column layout */
+@media (min-width: 768px) {
+  .layout {
+    /* left | center | right */
+    grid-template-columns: minmax(180px, 1fr) minmax(0, 720px) minmax(180px, 1fr);
+
+    /* constrain width & center the grid */
+    max-width: 1200px;
+    margin: 0 auto;
+
+    align-items: start;   /* align columns to top */
+    gap: 24px;
+  }
+
+  /* optional: keep side panels visible while scrolling */
+  .side { 
+    position: sticky; 
+    top: 16px; 
+    height: fit-content; 
+  }
+}
+
+/* Desktop widescreens: give center more room */
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: minmax(200px, 1fr) minmax(0, 800px) minmax(200px, 1fr);
+    max-width: 1300px;
+  }
 }

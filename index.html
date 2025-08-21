@@ -1,26 +1,56 @@
 <!DOCTYPE html>
 <html>
-
+  <!--HEAD-->
   <head>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-
     <title>Rick Balderas</title>
-
-	<link rel="stylesheet" href="style.css">
-
+	  <link rel="stylesheet" href="style.css">
   </head>
-
+  <!--BODY-->
   <body>
-    <h1>Hello, I’m Rick Balderas!</h1>
+    <!--LAYOUT WRAPPER: create 3-column grid on desktop/tablet,
+    1-column stacked layout on mobile-->
+    <div class="layout">
+      <!--LEFT SIDE PANEL (personal links and information, etc.)-->
+      <aside class="side left">
+        <nav class="panel">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="https://github.com/rickbalderas98" target="_blank">GitHub</a></li>
+            <li><a href="Ricardo_Balderas_Resume.pdf" target="_blank">Résumé</a></li>
+            <!--<li><a href="#contact">Contact</a></li>-->
+          </ul>
+        </nav>
+      </aside>
 
-    <img src="images/man.webp">
+      <!--MAIN CONTENT-->
+      <main class="main">
+        <h1>Hello, I'm Rick Balderas!</h1>
+        <img src="images/man.webp">
+        <p class="username">
+          Welcome to my personal website. I am a recent computer science graduate (Spring 2025) 
+        from the University of Texas at Rio Grande Valley. Along the way, I gained hands-on 
+        experience in software development, data analysis, UX/UI design, and network 
+        systems/protocols. Lately, I’ve taken an interest in web development—this site is my 
+        first step into that journey.
+        </p>
+      </main>
 
-    <p class="username">Welcome to my personal website. I am a recent computer science graduate (Spring 2025) from the University of Texas at Rio Grande Valley.
-     Along the way, I gained hands-on experience in software development, data analysis, UX/UI design, and network systems/protocols. However, lately I have taken an
-     interest in web development, a field I did not get the opportunity to study during my undergraduate years. This website represents my first step into that journey.
-    </p>
+      <!--RIGHT SIDE PANEL-->
+      <aside class="right side">
+        <div class="panel">
+          <h3>Now Learning</h3>
+          <ul>
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>GitHub Pages</li>
+          </ul>
+        </div>
+      </aside>
 
+      </div>
   </body>
 
 </html>
