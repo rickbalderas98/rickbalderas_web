@@ -3,15 +3,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 
-    background-image: url("images/space.jpg");
+    background-image: url("images/gif_sapce.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 html, body {
-    height: 100%;
     margin: 0;
+    padding: 0;
+    height: 100%; /*ensures body fills the screen*/
+    overflow-x: hidden; /*prevent sideways scroll if something is wide*/
 }
 
 img {
