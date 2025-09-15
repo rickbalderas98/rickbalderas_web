@@ -53,10 +53,6 @@ h1 {
 /*LAYOUT SYSTEM FOR SIDEBARS + CENTER CONTENT*/
 /*===========================================*/
 
-/* ===============================
-   LAYOUT SYSTEM FOR SIDEBARS + CENTER CONTENT
-   =============================== */
-
 /* Base: Mobile-first (stacked layout) */
 .layout {
   display: grid;
@@ -114,3 +110,75 @@ h1 {
     max-width: 1300px;
   }
 }
+
+/*===========================================*/
+/* EXTRA SECTION (resume download + contact) */
+/*===========================================*/
+
+.rb-sep {
+  height: 1px;
+  border: 0;
+  background: rgba(255,255,255,0.25);
+  max-width: 600px;
+  width: 90%;
+  margin: 24px auto;
+}
+
+#extras { 
+  max-width: 600px; 
+  width: 90%; 
+  margin: 0 auto 24px; 
+  text-align: left; 
+}
+
+.rb-h2 { 
+  margin: 12px 0; 
+  font-size: 20px; 
+}
+
+#extras p { 
+  background: none;       /* do NOT apply the global p background here */
+  padding: 0; 
+  margin: 8px 0; 
+  max-width: none; 
+  width: auto; 
+}
+
+.rb-link { 
+  color: #00e5ff; 
+  text-decoration: none; 
+}
+.rb-link:hover { text-decoration: underline; }
+
+.rb-form { margin-top: 8px; }
+
+.rb-label { 
+  display: block; 
+  font-size: 14px; 
+  margin: 10px 0 6px; 
+  opacity: 0.9; 
+}
+
+.rb-input { 
+  width: 100%; 
+  box-sizing: border-box; 
+  padding: 10px 12px; 
+  border-radius: 8px; 
+  border: 1px solid rgba(255,255,255,0.25); 
+  background: rgba(0,0,0,0.35); 
+  color: #fff; 
+  outline: none; 
+}
+.rb-input:focus { border-color: #00e5ff; }
+
+.rb-btn { 
+  margin-top: 12px; 
+  padding: 10px 16px; 
+  border-radius: 8px; 
+  border: 1px solid rgba(255,255,255,0.6); 
+  background: rgba(0,0,0,0.35); 
+  color: #fff; 
+  font-weight: 600; 
+  cursor: pointer; 
+}
+.rb-btn:hover { background: rgba(0,0,0,0.5); }
